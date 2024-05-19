@@ -6,6 +6,9 @@ on:
       pacEnvironmentSelector:
         required: true
         type: string
+      planGitHubEnvironment:
+        required: true
+        type: string
       PAC_INPUT_FOLDER:
         required: true
         type: string

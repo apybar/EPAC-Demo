@@ -6,6 +6,9 @@ on:
       pacEnvironmentSelector:
         required: true
         type: string
+      planGitHubEnvironment:
+        required: true
+        type: string
       PAC_OUTPUT_FOLDER:
         required: true
         type: string
@@ -47,7 +50,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.CLIENT_ID_BUILD }}
+          client-id: ${{ secrets.CLIENT_ID_PLAN }}
           tenant-id: ${{ secrets.TENANT_ID }}
           enable-AzPSSession: true
           allow-no-subscriptions: true
