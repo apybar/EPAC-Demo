@@ -20,9 +20,28 @@
                 "displayName": "MONITORING - ",
                 "description": "Environment controls enforcement with "
             },
+            "parameters": {
+                "logAnalytics": "/subscriptions/bf940dcb-0af5-4597-a54e-1aa5d3cc0b38/resourcegroups/rg-itprod-monitr01/providers/microsoft.operationalinsights/workspaces/log-itprod-wrkspc01"
+            },
             "scope": {
                 "EPAC-PROD": [
                     "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                ]
+            }
+        },
+        {
+            "nodeName": "EPAC-DEV/",
+            "assignment": {
+                "name": "msft-",
+                "displayName": "MONITORING - ",
+                "description": "Environment controls enforcement with "
+            },
+            "parameters": {
+                "logAnalytics": "/subscriptions/0b27b865-a0c7-4641-9454-21fee537724e/resourcegroups/LAW-Resource-Group/providers/microsoft.operationalinsights/workspaces/log-itdevelopment-wrkspc01"
+            },
+            "scope": {
+                "EPAC-DEV": [
+                    "/providers/Microsoft.Management/managementGroups/909be1b6-8066-40a0-862a-2bb84c65826a"
                 ]
             }
         }
