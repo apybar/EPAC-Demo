@@ -8,7 +8,7 @@
                 "append": true,
                 "name": "KVG",
                 "displayName": "Enforce Key Vault Guardrails for Azure Cloud",
-                "description": "Enforce recommended guardrails for Azure KeyVault."
+                "description": "Enforce recommended guardrails for Azure Key Vault"
             }
         }
     ],
