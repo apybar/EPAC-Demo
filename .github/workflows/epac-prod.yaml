@@ -15,7 +15,7 @@ permissions:
 jobs:
   plan:
     name: 'Build Deployment Plan: EPAC-PROD'
-    uses: ./.github/workflows/reusable-reusable-plan.yml
+    uses: ./.github/workflows/reusable-plan.yml
     with:
       pacEnvironmentSelector: EPAC-PROD
       PAC_OUTPUT_FOLDER: ./Output
@@ -26,7 +26,7 @@ jobs:
     name: 'Deploy Policy Changes: EPAC-PROD'
     needs: plan
     if: needs.plan.outputs.deployPolicyChanges == 'yes' && startsWith(github.ref, 'refs/heads/releases-prod/')
-    uses: ./.github/workflows/deploy-policy.yml
+    uses: ./.github/workflows/reusable-deploy-policy.yml
     with:
       pacEnvironmentSelector: EPAC-PROD
       PAC_INPUT_FOLDER: "$(GITHUB_WORKSPACE)/plans-prod"
