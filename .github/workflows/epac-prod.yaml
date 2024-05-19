@@ -1,7 +1,7 @@
 name: EPAC-PROD
 
 env:
-  pacEnvironment: Production # Change this to a PAC environment name
+  pacEnvironment: EPAC-PROD # Change this to a PAC environment name
   definitionsRootFolder: Definitions
   planFolder: Output
 
