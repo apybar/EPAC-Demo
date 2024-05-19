@@ -1,0 +1,30 @@
+{
+    "nodeName": "/EncryptTransit/",
+    "definitionEntryList": [
+        {
+            "policySetName": "Enforce-EncryptTransit",
+            "displayName": "Enforce HTTPS and TLS 1.2 requirement",
+            "assignment": {
+                "append": true,
+                "name": "TLSHTTPS",
+                "displayName": "Enforce HTTPS and TLS 1.2 requirement",
+                "description": "Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit for various supported Azure Services",
+            }
+        }
+    ],
+    "children": [
+        {
+            "nodeName": "EPAC-PROD/",
+            "assignment": {
+                "name": "msft-",
+                "displayName": "NETWORKING - ",
+                "description": "EPAC-DEV Environment controls enforcement with "
+            },
+            "scope": {
+                "EPAC-PROD": [
+                    "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "4d8a4182-aaf5-42f4-a7bc-8405f1c1fe1f",
+    "properties": {
+        "displayName": "Allowed Locations Initiative",
+        "description": "This is the groupig of allowed location policies required for this environment",
+        "metadata": {
+        },
+        "PolicyDefinitions": [
+            {
+                "policyDefinitionReferenceId": "allowedlocations",
+                "policyDefinitionName": "e600ddf2-540a-4f64-9386-a5cde049dac7"
+            },
+            {
+                "policyDefinitionReferenceId": "allowedlocationsRG",
+                "policyDefinitionName": "30f411a2-4ce7-4b48-b470-b50284c2e8b3"
+            },
+            {
+                "policyDefinitionReferenceId": "allowedResources",
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6c112d4e-5bc7-47ae-a041-ea2d9dccd749",
+                "parameters": {
+                    "listOfResourceTypesNotAllowed": {
+                        "value": ["microsoft.authorization/classicadministrators","microsoft.classicinfrastructuremigrate/classicinfrastructureresources","microsoft.marketplaceapps/classicdevservices","microsoft.classicCompute/domainNames","Microsoft.ClassicCompute/VirtualMachines","Microsoft.ClassicNetwork/networkSecurityGroups","Microsoft.ClassicNetwork/reservedIps","Microsoft.ClassicNetwork/virtualNetworks","Microsoft.ClassicStorage/StorageAccounts"]
+                    },
+                    "effect": {
+                        "value": "Audit"
+                    }
+                }
+            }
+        ]
+    }
+}

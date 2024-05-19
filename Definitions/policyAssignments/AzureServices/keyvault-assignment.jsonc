@@ -1,0 +1,30 @@
+{
+    "nodeName": "/KVGuardrails/",
+    "definitionEntryList": [
+        {
+            "policySetName": "Enforce-Guardrails-KeyVault",
+            "displayName": "Enforce Key Vault Guardrails for Azure Cloud",
+            "assignment": {
+                "append": true,
+                "name": "KVG",
+                "displayName": "Enforce Key Vault Guardrails for Azure Cloud",
+                "description": "Enforce recommended guardrails for Azure KeyVault."
+            }
+        }
+    ],
+    "children": [
+        {
+            "nodeName": "EPAC-PROD/",
+            "assignment": {
+                "name": "msft-",
+                "displayName": "KEYVAULT - ",
+                "description": "Environment controls enforcement with "
+            },
+            "scope": {
+                "EPAC-PROD": [
+                    "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                ]
+            }
+        }
+    ]
+}

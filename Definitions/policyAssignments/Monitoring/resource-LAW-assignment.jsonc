@@ -1,0 +1,30 @@
+{
+    "nodeName": "/resourceMonitoringLAW/",
+    "definitionEntryList": [
+        {
+            "policySetName": "f5b29bc4-feca-4cc6-a58a-772dd5e290a5",
+            "displayName": "Configure Monitoring for Resource Level Logs to LAW",
+            "assignment": {
+                "append": true,
+                "name": "RLAW",
+                "displayName": "Configure Monitoring for Resource Level Logs to LAW",
+                "description": "Policy for Monitoring Requirements"
+            }
+        }
+    ],
+    "children": [
+        {
+            "nodeName": "EPAC-PROD/",
+            "assignment": {
+                "name": "msft-",
+                "displayName": "MONITORING - ",
+                "description": "Environment controls enforcement with "
+            },
+            "scope": {
+                "EPAC-PROD": [
+                    "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                ]
+            }
+        }
+    ]
+}

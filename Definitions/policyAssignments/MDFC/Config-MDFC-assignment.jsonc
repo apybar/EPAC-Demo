@@ -1,0 +1,30 @@
+{
+    "nodeName": "/mdfc-config/",
+    "definitionEntryList": [
+        {
+            "policySetName": "Config-MDFC",
+            "displayName": "Configure Microsoft Defender for Cloud",
+            "assignment": {
+                "append": true,
+                "name": "MDFC",
+                "displayName": "Configure Microsoft Defender for Cloud",
+                "description": "Configure Microsoft Defender for Cloud"
+            }
+        }
+    ],
+    "children": [
+        {
+            "nodeName": "EPAC-PROD/",
+            "assignment": {
+                "name": "msft-",
+                "displayName": "MDFC - ",
+                "description": "Environment controls enforcement with "
+            },
+            "scope": {
+                "EPAC-PROD": [
+                    "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                ]
+            }
+        }
+    ]
+}

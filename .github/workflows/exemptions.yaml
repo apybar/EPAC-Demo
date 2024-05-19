@@ -1,0 +1,46 @@
+name: EXEMPTIONS
+
+env:
+  pacEnvironment: EPAC-DEV # Change this to a PAC environment name
+  definitionsRootFolder: Definitions
+  planFolder: Output
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Generate Documentation
+    runs-on: ubuntu-latest
+    environment: 
+      name: EPAC-DEV
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+
+      - shell: pwsh
+        name: Install Required Modules
+        run: |
+          Install-Module Az.ResourceGraph -Force -AllowClobber
+          Install-Module Az.Resources -Force -AllowClobber
+          Install-Module EnterprisePolicyAsCode -Force
+
+      - name: Azure Login
+        uses: Azure/login@v1
+        with:
+          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+          enable-AzPSSession: true
+          allow-no-subscriptions: true
+
+      - name: Generate Documentation
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            Export-AzPolicyResources
+          azPSVersion: "latest"
+
+      - name: Upload Deployment Plan as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Documentation
+          path: Output

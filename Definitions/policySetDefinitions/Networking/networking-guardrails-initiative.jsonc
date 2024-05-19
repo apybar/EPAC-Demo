@@ -1,0 +1,27 @@
+{
+    "name": "17cdad06-c61a-4962-b325-a4d829612360",
+    "properties": {
+        "displayName": "Enforce Guardrails for Networking",
+        "description": "This is the grouping of Networking Policies required for this environment",
+        "metadata": {
+        },
+        "PolicyDefinitions": [
+            {
+                "policyDefinitionReferenceId": "Deny-PublicIP",
+                "policyDefinitionName": "Deny-PublicIP"
+            },
+            {
+                "policyDefinitionReferenceId": "Deny-Subnet-Without-Nsg",
+                "policyDefinitionName": "Deny-Subnet-Without-Nsg"
+            },
+            {
+                "policyDefinitionReferenceId": "IPForwarding",
+                "policyDefinitionName": "88c0b9da-ce96-4b03-9635-f29a937e2900"
+            },
+            {
+                "policyDefinitionReferenceId": "Deny-MgmtPorts-From-Internet",
+                "policyDefinitionName": "Deny-MgmtPorts-From-Internet"
+            }
+        ]
+    }
+}

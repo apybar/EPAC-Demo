@@ -1,0 +1,40 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-definition-schema.json",
+    "name": "30f411a2-4ce7-4b48-b470-b50284c2e8b3",
+    "properties": {
+        "displayName": "Allowed locations for resource groups",
+        "mode": "Indexed",
+        "description": "This policy enables you to restrict the locations your organization can create resource groups in. Use to enforce your geo-compliance requirements.",
+        "metadata": {},
+        "parameters": {
+            "listOfAllowedLocations": {
+                "type": "Array",
+                "metadata": {
+                    "description": "The list of locations that can be specified when deploying resources.",
+                    "strongType": "location",
+                    "displayName": "Allowed locations"
+                },
+                "defaultValue": [
+                    "eastus"
+                ]
+            }
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+                    },
+                    {
+                        "field": "location",
+                        "notIn": "[parameters('listOfAllowedLocations')]"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "audit"
+            }
+        }
+    }
+}

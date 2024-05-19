@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+  "nodeName": "/Security/",
+  "parameterFile": "security-baseline-parameters.csv",
+  "definitionEntryList": [
+    {
+      "policySetId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+      "displayName": "Microsoft Cloud Security Benchmark",
+      "assignment": {
+        "append": true,
+        "name": "MCSB",
+        "displayName": "Microsoft Cloud Security Benchmark",
+        "description": "Microsoft Cloud Security Benchmark Initiative"
+      }
+    }
+  ],
+  "children": [
+    {
+      "nodeName": "EPAC-PROD/",
+      "assignment": {
+        "name": "msft-",
+        "displayName": "BENCHMARK - ",
+        "description": "Environment controls enforcement with "
+      },
+      "parameterSelector": "prod",
+      "scope": {
+        "EPAC-PROD": [
+            "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+        ]
+    }
+    }
+  ]
+}

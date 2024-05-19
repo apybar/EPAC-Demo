@@ -1,0 +1,30 @@
+{
+    "nodeName": "/networkingGuardrails/",
+    "definitionEntryList": [
+        {
+            "policySetName": "17cdad06-c61a-4962-b325-a4d829612360",
+            "displayName": "Enforce Networking Guardrails for Azure Cloud",
+            "assignment": {
+                "append": true,
+                "name": "nwk",
+                "displayName": "Enforce Networking Guardrails for Azure Cloud",
+                "description": "Enforce Networking Guardrails for Azure Cloud"
+            }
+        }
+    ],
+    "children": [
+        {
+            "nodeName": "EPAC-PROD/",
+            "assignment": {
+                "name": "msft-",
+                "displayName": "NETWORKING - ",
+                "description": "Environment controls enforcement with "
+            },
+            "scope": {
+                "EPAC-PROD": [
+                    "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                ]
+            }
+        }
+    ]
+}
