@@ -9,7 +9,7 @@
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
             "desiredState": { // [optional]
                 "strategy": "ownedOnly", // default full
-                "keepDfcSecurityAssignments": true // default false
+                "keepDfcSecurityAssignments": false // default false
             },
             "globalNotScopes": [
                 "/subscriptions/*/resourceGroups/*"
@@ -23,7 +23,7 @@
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd",
             "desiredState": { // [optional]
                 "strategy": "full", // default full
-                "keepDfcSecurityAssignments": true // default false // default full
+                "keepDfcSecurityAssignments": false // default false // default full
             },
             "globalNotScopes": [
                 "/subscriptions/*/resourceGroups/*"
