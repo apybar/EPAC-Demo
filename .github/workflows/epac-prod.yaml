@@ -26,7 +26,7 @@ jobs:
   deployPolicy:
     name: 'Deploy Policy Changes: EPAC-PROD'
     needs: plan
-    if: needs.plan.outputs.deployPolicyChanges == 'yes' && startsWith(github.ref, 'refs/heads/releases-prod/')
+    if: needs.plan.outputs.deployPolicyChanges == 'yes' && startsWith(github.ref, 'refs/heads/main/')
     uses: ./.github/workflows/reusable-deploy-policy.yml
     with:
       pacEnvironmentSelector: EPAC-PROD
@@ -38,7 +38,7 @@ jobs:
   deployRoles:
     name: 'Deploy Role Changes: EPAC-PROD'
     needs: plan
-    if: needs.plan.outputs.deployRoleChanges == 'yes' && startsWith(github.ref, 'refs/heads/releases')
+    if: needs.plan.outputs.deployRoleChanges == 'yes' && startsWith(github.ref, 'refs/heads/main')
     uses: ./.github/workflows/reusable-deploy-roles.yml
     with:
       pacEnvironmentSelector: EPAC-PROD

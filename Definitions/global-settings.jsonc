@@ -12,7 +12,6 @@
                 "keepDfcSecurityAssignments": false // default false
             },
             "globalNotScopes": [
-                "/subscriptions/*/resourceGroups/*"
             ],
             "managedIdentityLocation": "eastus2"
         },
@@ -26,7 +25,6 @@
                 "keepDfcSecurityAssignments": false // default false // default full
             },
             "globalNotScopes": [
-                "/subscriptions/*/resourceGroups/*"
             ],
             "managedIdentityLocation": "eastus2"
         }
