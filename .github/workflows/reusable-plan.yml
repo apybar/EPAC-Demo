@@ -1,4 +1,4 @@
-name: 'Reusable Workflow: Plan'
+name: 'Reusable Workflow: Build Plan'
 
 on:
   workflow_call:
