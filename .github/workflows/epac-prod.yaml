@@ -118,7 +118,7 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v1
         with:
-          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+          creds: '{"clientId":"${{ secrets.CLIENT_ID_POLICIES }}","clientSecret":"${{ secrets.CLIENT_SECRET_POLICIES }}","tenantId":"${{ secrets.TENANT_ID }}"}'
           enable-AzPSSession: true
           allow-no-subscriptions: true
 
@@ -159,7 +159,7 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v1
         with:
-          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+          creds: '{"clientId":"${{ secrets.CLIENT_ID_ROLES }}","clientSecret":"${{ secrets.CLIENT_SECRET_ROLES }}","tenantId":"${{ secrets.TENANT_ID }}"}'
           enable-AzPSSession: true
           allow-no-subscriptions: true
 
