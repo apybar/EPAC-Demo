@@ -22,7 +22,7 @@
             "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd",
             "desiredState": { // [optional]
                 "strategy": "full", // default full
-                "keepDfcSecurityAssignments": false // default false // default full
+                "keepDfcSecurityAssignments": false // default false
             },
             "globalNotScopes": [
             ],
