@@ -31,7 +31,7 @@ jobs:
     with:
       pacEnvironmentSelector: EPAC-PROD
       planGitHubEnvironment: Production
-      PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/plans-$(pacEnvironmentSelector)"
+      PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
 
@@ -43,6 +43,6 @@ jobs:
     with:
       pacEnvironmentSelector: EPAC-PROD
       planGitHubEnvironment: Production
-      PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/plans-$(pacEnvironmentSelector)"
+      PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
