@@ -1,5 +1,5 @@
 # This pipeline is used to deploy Policies, Initiative definitions and Assignments into Azure.
-name: Deploy Environment-1
+name: Deploy Environment-2
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     uses: ./.github/workflows/reusable-plan.yml
     with:
       pacEnvironmentSelector: EPAC-DEV
-      planGitHubEnvironment: NT 4.0
+      planGitHubEnvironment: Environment-2
       PAC_OUTPUT_FOLDER: ./Output
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
@@ -30,7 +30,7 @@ jobs:
     uses: ./.github/workflows/reusable-deploy-policy.yml
     with:
       pacEnvironmentSelector: EPAC-DEV
-      planGitHubEnvironment: NT 4.0
+      planGitHubEnvironment: Environment-2
       PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
@@ -42,7 +42,7 @@ jobs:
     uses: ./.github/workflows/reusable-deploy-roles.yml
     with:
       pacEnvironmentSelector: EPAC-DEV
-      planGitHubEnvironment: NT 4.0
+      planGitHubEnvironment: Environment-2
       PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
