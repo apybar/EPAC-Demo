@@ -1,5 +1,5 @@
 # This pipeline is used to deploy Policies, Initiative definitions and Assignments into Azure.
-name: Deploy NT 4.0
+name: Deploy Environment-3
 
 on:
   workflow_dispatch:
