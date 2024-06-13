@@ -1,5 +1,5 @@
 # This pipeline is used to deploy Policies, Initiative definitions and Assignments into Azure.
-name: EPAC-PROD
+name: Deploy NT 4.0
 
 on:
   workflow_dispatch:
@@ -14,35 +14,35 @@ permissions:
 
 jobs:
   plan:
-    name: 'Build Deployment Plan: EPAC-PROD'
+    name: 'Build Deployment Plan: EPAC-DEV'
     uses: ./.github/workflows/reusable-plan.yml
     with:
-      pacEnvironmentSelector: EPAC-PROD
-      planGitHubEnvironment: Production
+      pacEnvironmentSelector: EPAC-DEV
+      planGitHubEnvironment: NT 4.0
       PAC_OUTPUT_FOLDER: ./Output
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
 
   deployPolicy:
-    name: 'Deploy Policy Changes: EPAC-PROD'
+    name: 'Deploy Policy Changes: EPAC-DEV'
     needs: plan
     if: needs.plan.outputs.deployPolicyChanges == 'yes'
     uses: ./.github/workflows/reusable-deploy-policy.yml
     with:
-      pacEnvironmentSelector: EPAC-PROD
-      planGitHubEnvironment: Production
+      pacEnvironmentSelector: EPAC-DEV
+      planGitHubEnvironment: NT 4.0
       PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
 
   deployRoles:
-    name: 'Deploy Role Changes: EPAC-PROD'
+    name: 'Deploy Role Changes: EPAC-DEV'
     needs: plan
     if: needs.plan.outputs.deployRoleChanges == 'yes'
     uses: ./.github/workflows/reusable-deploy-roles.yml
     with:
-      pacEnvironmentSelector: EPAC-PROD
-      planGitHubEnvironment: Production
+      pacEnvironmentSelector: EPAC-DEV
+      planGitHubEnvironment: NT 4.0
       PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
