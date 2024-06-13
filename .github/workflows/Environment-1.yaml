@@ -18,7 +18,7 @@ jobs:
     uses: ./.github/workflows/reusable-plan.yml
     with:
       pacEnvironmentSelector: EPAC-PROD
-      planGitHubEnvironment: GTM
+      planGitHubEnvironment: Environment-1
       PAC_OUTPUT_FOLDER: ./Output
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
@@ -30,7 +30,7 @@ jobs:
     uses: ./.github/workflows/reusable-deploy-policy.yml
     with:
       pacEnvironmentSelector: EPAC-PROD
-      planGitHubEnvironment: GTM
+      planGitHubEnvironment: Environment-1
       PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
@@ -42,7 +42,7 @@ jobs:
     uses: ./.github/workflows/reusable-deploy-roles.yml
     with:
       pacEnvironmentSelector: EPAC-PROD
-      planGitHubEnvironment: GTM
+      planGitHubEnvironment: Environment-1
       PAC_INPUT_FOLDER: "/home/runner/work/EPAC-Demo/EPAC-Demo/"
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
