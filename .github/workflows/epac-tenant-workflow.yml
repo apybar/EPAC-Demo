@@ -6,10 +6,8 @@ on:
     branches:
       - main
     types:
-      - closed
-    paths:
-      - 'Definitions/**'
-
+      - opened
+      
 env:
   PAC_OUTPUT_FOLDER: ./Output
   PAC_DEFINITIONS_FOLDER: ./Definitions
