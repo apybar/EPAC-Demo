@@ -6,7 +6,7 @@
             "displayName": "Enforce Tagging Requirements for Azure Cloud",
             "assignment": {
                 "append": true,
-                "name": "tag",
+                "name": "tag2",
                 "displayName": "Enforce Tagging Requirements for Azure Cloud.",
                 "description": "Policy for Tagging Requirements"
             }
