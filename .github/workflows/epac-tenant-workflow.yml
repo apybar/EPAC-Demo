@@ -9,7 +9,7 @@ on:
       - closed
     paths:
       - 'Definitions/**'
-
+      
 env:
   PAC_OUTPUT_FOLDER: ./Output
   PAC_DEFINITIONS_FOLDER: ./Definitions
