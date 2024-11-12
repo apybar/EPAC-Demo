@@ -3,7 +3,7 @@
     "definitionEntryList": [
         {
             "policySetName": "Enforce-Guardrails-KeyVault",
-            "displayName": "Eaanfaaorce Key Vault Guardrails for Azure Cloud",
+            "displayName": "Eaaanfaaorce Key Vault Guardrails for Azure Cloud",
             "assignment": {
                 "append": true,
                 "name": "KVG",
