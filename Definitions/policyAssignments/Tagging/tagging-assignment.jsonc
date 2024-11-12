@@ -21,8 +21,8 @@
                 "description": "Environment controls enforcement with "
             },
             "scope": {
-                "EPAC-DEV": [
-                    "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350"
+                "tenant": [
+                    "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
                 ]
             }
         },
