@@ -3,28 +3,16 @@
     "pacOwnerId": "4bd3205d-7f89-49e8-b268-2cdfdafb4bde",
     "pacEnvironments": [
         {
-            "pacSelector": "EPAC-DEV",
+            "pacSelector": "tenant",
             "cloud": "AzureCloud",
-            "tenantId": "4fb849a3-3ff3-4362-af8e-45174cd753dd",
-            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/972a17b5-6e2d-4da4-8304-84ac00bb3350",
-            "desiredState": { // [optional]
-                "strategy": "ownedOnly", // default full
-                "keepDfcSecurityAssignments": false // default false
-            },
-            "globalNotScopes": [
-            ],
-            "managedIdentityLocation": "eastus2"
-        },
-        {
-            "pacSelector": "EPAC-PROD",
-            "cloud": "AzureCloud",
-            "tenantId": "4fb849a3-3ff3-4362-af8e-45174cd753dd",
-            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd",
-            "desiredState": { // [optional]
+            "tenantId": "68b133a0-68af-43fa-a9c3-d1b9bf296ea5",
+            "deploymentRootScope": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5",
+            "desiredState": {
                 "strategy": "full", // default full
-                "keepDfcSecurityAssignments": false // default false
+                "keepDfcSecurityAssignments": false
             },
             "globalNotScopes": [
+                "/subscriptions/*/resourceGroups/*"
             ],
             "managedIdentityLocation": "eastus2"
         }
