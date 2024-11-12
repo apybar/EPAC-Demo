@@ -22,7 +22,7 @@
             },
             "scope": {
                 "tenant": [
-                    "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
+                    "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
                 ]
             }
         }
