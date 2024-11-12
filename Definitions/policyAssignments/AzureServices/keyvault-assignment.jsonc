@@ -14,14 +14,14 @@
     ],
     "children": [
         {
-            "nodeName": "EPAC-PROD/",
+            "nodeName": "tenant/",
             "assignment": {
                 "name": "msft-",
                 "displayName": "KEYVAULT - ",
                 "description": "Environment controls enforcement with "
             },
             "scope": {
-                "EPAC-PROD": [
+                "tenant": [
                     "/providers/Microsoft.Management/managementGroups/4fb849a3-3ff3-4362-af8e-45174cd753dd"
                 ]
             }
