@@ -3,10 +3,10 @@
     "definitionEntryList": [
         {
             "policySetName": "cb71df76-7a26-4035-957f-0cf08844c4df",
-            "displayName": "Enforce Tagging Requirements for Azure Cloud",
+            "displayName": "NOW enforce Tagging Requirements for Azure Cloud",
             "assignment": {
                 "append": true,
-                "name": "tag",
+                "name": "tag2",
                 "displayName": "Enforce Tagging Requirements for Azure Cloud.",
                 "description": "Policy for Tagging Requirements"
             }
