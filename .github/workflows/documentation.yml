@@ -16,12 +16,9 @@ on:
         required: true
         type: string
     outputs:
-      deployPolicyChanges:
+      documentation:
         description: "The result of evaluating if a policy deployment is required"
-        value: ${{ jobs.plan.outputs.deployPolicyChanges }}
-      deployRoleChanges:
-        description: "The result of evaluating if a role deployment is required"
-        value: ${{ jobs.plan.outputs.deployRoleChanges }}
+        value: ${{ jobs.plan.outputs.documentation }}
 
 env:
   PAC_OUTPUT_FOLDER: ./Output
@@ -31,9 +28,6 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     environment: ${{ inputs.planGitHubEnvironment }}
-    outputs:
-      deployPolicyChanges: ${{ steps.detectPlan.outputs.deployPolicyChanges }}
-      deployRoleChanges: ${{ steps.detectPlan.outputs.deployRoleChanges }}
 
     steps:
       - name: Checkout
@@ -58,27 +52,12 @@ jobs:
         uses: azure/powershell@v2
         with:
           inlineScript: |
-            Build-DeploymentPlans -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
+            Build-PolicyDocumentation -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
           azPSVersion: "latest"
 
-      - name: Detect Plan File
-        id: detectPlan
-        run: |
-          if (Test-Path $env:PAC_OUTPUT_FOLDER) {
-            echo "deployPolicyChanges=yes" >> $env:GITHUB_OUTPUT
-            if (Get-ChildItem $env:PAC_OUTPUT_FOLDER -Recurse -Include roles-plan.json){
-              echo "deployRoleChanges=yes" >> $env:GITHUB_OUTPUT
-            }
-          }
-          else {
-            echo "::notice title=Detect Plan::Plan not found. Nothing to deploy. Skipping remaining tasks and deploy jobs..."
-          }
-        shell: pwsh
-
       - name: Upload Deployment Plan as Artifact
-        if: steps.detectPlan.outputs.deployPolicyChanges == 'yes' || steps.detectPlan.outputs.deployRoleChanges == 'yes'
         uses: actions/upload-artifact@v4
         with:
-          name: "plans-${{ inputs.pacEnvironmentSelector }}"
+          name: "documentation"
           path: ${{ env.PAC_OUTPUT_FOLDER }}
           if-no-files-found: error
