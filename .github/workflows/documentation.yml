@@ -1,4 +1,4 @@
-name: Reusable Workflow: Deploy Policy
+name: 'Reusable Workflow: Deploy Policy'
 
 on:
   workflow_call:
