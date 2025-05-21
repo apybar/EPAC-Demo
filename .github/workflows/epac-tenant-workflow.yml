@@ -52,3 +52,13 @@ jobs:
       PAC_INPUT_FOLDER: ./Output
       PAC_DEFINITIONS_FOLDER: ./Definitions
     secrets: inherit
+
+  documentation:
+    name: Documenation
+    uses: ./.github/workflows/documentation.yml
+    with:
+      pacEnvironmentSelector: tenant
+      planGitHubEnvironment: TENANT-PLAN
+      PAC_INPUT_FOLDER: ./Output
+      PAC_DEFINITIONS_FOLDER: ./Definitions
+    secrets: inherit
