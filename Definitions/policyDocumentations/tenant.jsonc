@@ -1,16 +1,26 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-documentation-schema.json",
-    "documentAllAssignments": [
-        {
-            "pacEnvironment": "tenant",
-            "fileNameStemPrefix": "Prod",
-            "skipPolicyAssignments": [],
-            "skipPolicyDefinitions": [
-                // "/providers/microsoft.authorization/policysetdefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8" // Azure Security Benchmark v3
-            ],
-            "overrideEnvironmentCategory": {}
-        }
-    ],
+    "documentAssignments": {
+        "documentAllAssignments": [
+            {
+                "pacEnvironment": "TenantRootGroup",
+                "fileNameStemPrefix": "Prod",
+                "skipPolicyAssignments": [],
+                "skipPolicyDefinitions": [
+                    // "/providers/microsoft.authorization/policysetdefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8" // Azure Security Benchmark v3
+                ],
+                "overrideEnvironmentCategory": {
+                }
+            }
+        ],
+        "documentationSpecifications": [
+            {
+                "fileNameStem": "Azure-Policy-Assignments",
+                "environmentCategories": [],
+                "title": "Current list of Azure Policies deployed"
+            }
+        ]
+    },
     "documentPolicySets": [
         {
             "pacEnvironment": "tenant",
