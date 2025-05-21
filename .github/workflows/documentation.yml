@@ -23,7 +23,6 @@ on:
 env:
   PAC_OUTPUT_FOLDER: ./Output
   PAC_DEFINITIONS_FOLDER: ./Definitions
-  PacEnvironmentSelector: tenant
 
 jobs:
   document:
@@ -53,7 +52,7 @@ jobs:
         uses: azure/powershell@v2
         with:
           inlineScript: |
-            Build-PolicyDocumentation -PacEnvironmentSelector ${{ env.pacEnvironmentSelector }} -InformationAction Continue
+            Build-PolicyDocumentation -pacSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
           azPSVersion: "latest"
 
       - name: Upload Deployment Plan as Artifact
