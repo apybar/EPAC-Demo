@@ -48,7 +48,7 @@ jobs:
           enable-AzPSSession: true
           allow-no-subscriptions: true
 
-      - name: Plan
+      - name: Documentation
         uses: azure/powershell@v2
         with:
           inlineScript: |
