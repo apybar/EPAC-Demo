@@ -3,7 +3,7 @@
     "documentAssignments": {
         "documentAllAssignments": [
             {
-                "pacEnvironment": "TenantRootGroup",
+                "pacEnvironment": "tenant",
                 "fileNameStemPrefix": "Prod",
                 "skipPolicyAssignments": [],
                 "skipPolicyDefinitions": [
