@@ -23,9 +23,10 @@ on:
 env:
   PAC_OUTPUT_FOLDER: ./Output
   PAC_DEFINITIONS_FOLDER: ./Definitions
+  PacEnvironmentSelector: tenant
 
 jobs:
-  plan:
+  document:
     runs-on: ubuntu-latest
     environment: ${{ inputs.planGitHubEnvironment }}
 
@@ -52,7 +53,7 @@ jobs:
         uses: azure/powershell@v2
         with:
           inlineScript: |
-            Build-PolicyDocumentation -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
+            Build-PolicyDocumentation -PacEnvironmentSelector ${{ env.pacEnvironmentSelector }} -InformationAction Continue
           azPSVersion: "latest"
 
       - name: Upload Deployment Plan as Artifact
