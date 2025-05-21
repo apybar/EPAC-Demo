@@ -52,7 +52,7 @@ jobs:
         uses: azure/powershell@v2
         with:
           inlineScript: |
-            Build-PolicyDocumentation -pacSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
+            Build-PolicyDocumentation
           azPSVersion: "latest"
 
       - name: Upload Deployment Plan as Artifact
