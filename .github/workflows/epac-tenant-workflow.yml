@@ -2,14 +2,8 @@
 name: EPAC Tenant Workflow
 
 on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
-    paths:
-      - 'Definitions/**'
-      
+  workflow_dispatch
+  
 env:
   PAC_OUTPUT_FOLDER: ./Output
   PAC_DEFINITIONS_FOLDER: ./Definitions
