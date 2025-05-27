@@ -1,5 +1,5 @@
 # This pipeline is used to deploy Policies, Initiative definitions and Assignments into Azure.
-name: EPAC Tenant Workflow
+name: Export Compliance
 
 on:
   workflow_dispatch
