@@ -1,4 +1,4 @@
-name: 'Reusable Workflow: Documentation'
+name: 'Reusable Workflow: Compliance Report'
 
 on:
   workflow_call:
