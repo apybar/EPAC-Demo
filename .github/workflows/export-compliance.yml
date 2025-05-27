@@ -13,9 +13,9 @@ permissions:
   id-token: write
 
 jobs:
-  plan:
-    name: Plan tenant
-    uses: ./.github/workflows/plan.yml
+  export:
+    name: Export Compliance
+    uses: ./.github/workflows/export-noncompliancereport.yml
     with:
       pacEnvironmentSelector: tenant
       planGitHubEnvironment: TENANT-PLAN
