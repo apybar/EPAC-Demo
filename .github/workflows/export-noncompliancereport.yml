@@ -16,9 +16,9 @@ on:
         required: true
         type: string
     outputs:
-      compliance-report:
-        description: "The result of compliance for Azure Policy"
-        value: ${{ jobs.plan.outputs.compliance-report }}
+      complianceReport:
+        description: "The result of compliance reporting from EPAC"
+        value: ${{ jobs.plan.outputs.complianceReport }}
 
 env:
   PAC_OUTPUT_FOLDER: ./Output
@@ -58,6 +58,6 @@ jobs:
       - name: Upload Deployment Plan as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: "compliance-report"
+          name: "complianceReport"
           path: ${{ env.PAC_OUTPUT_FOLDER }}
           if-no-files-found: error
