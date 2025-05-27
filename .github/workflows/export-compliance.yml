@@ -14,7 +14,6 @@ permissions:
 
 jobs:
   export:
-    name: Export Azure Policy Compliance
     uses: ./.github/workflows/export-compliance.yml
     with:
       pacEnvironmentSelector: tenant
