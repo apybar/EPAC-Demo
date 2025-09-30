@@ -1,23 +1,19 @@
 {
     "nodeName": "/tagging/",
-    "definitionEntryList": [
+    "definitionEntry": {
+    "policySetName": "global-tagging-initiative",
+    "nonComplianceMessages": [
         {
-            "policySetName": "global-tagging-initiative",
-            "displayName": "Demo enforce Tagging Requirements for Azure Cloud",
-            "assignment": {
-                "append": true,
-                "name": "tag2",
-                "displayName": "Enforce Tagging Requirements for Azure Cloud.",
-                "description": "Policy for Tagging Requirements"
-            }
+            "message": "You do not meet all Tier 0 tagging requirements, check policy assginment TAGGING - Enforce Tier 0 Tagging Requirements'"
         }
-    ],
+    ]
+},
     "children": [
         {
             "nodeName": "tenant/",
             "assignment": {
-                "name": "msft-",
-                "displayName": "TAGGING - ",
+                "name": "tagging",
+                "displayName": "TAGGING - Demo Tagging Requirements",
                 "description": "Environment controls enforcement with "
             },
             "scope": {
@@ -28,3 +24,4 @@
         }
     ]
 }
+

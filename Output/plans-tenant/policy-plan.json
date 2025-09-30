@@ -1,0 +1,109 @@
+{
+  "assignments": {
+    "numberOfChanges": 2,
+    "numberUnchanged": 0,
+    "delete": {
+      "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/msft-tag2": {
+        "displayName": "TAGGING - Enforce Tagging Requirements for Azure Cloud.",
+        "scopeId": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5",
+        "name": "msft-tag2",
+        "id": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/msft-tag2"
+      }
+    },
+    "update": {},
+    "new": {
+      "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging": {
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policySetDefinitions/global-tagging-initiative",
+        "nonComplianceMessages": [
+          {
+            "message": "You do not meet all Tier 0 tagging requirements, check policy assginment TAGGING - Enforce Tier 0 Tagging Requirements'"
+          }
+        ],
+        "enforcementMode": "Default",
+        "displayName": "TAGGING - Demo Tagging Requirements",
+        "identity": {
+          "type": "SystemAssigned"
+        },
+        "description": "Environment controls enforcement with ",
+        "metadata": {
+          "assignedBy": "epac/4bd3205d-7f89-49e8-b268-2cdfdafb4bde/tenant",
+          "pacOwnerId": "4bd3205d-7f89-49e8-b268-2cdfdafb4bde"
+        },
+        "name": "tagging",
+        "managedIdentityLocation": "eastus2",
+        "identityRequired": true,
+        "id": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging",
+        "scope": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5",
+        "notScopes": [
+          "/subscriptions/e5b796a7-2664-457c-b6e5-901740b4c045/resourceGroups/B2C",
+          "/subscriptions/e5b796a7-2664-457c-b6e5-901740b4c045/resourceGroups/Default-ActivityLogAlerts",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/AWS-DEV",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/Default-ActivityLogAlerts",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/DefaultResourceGroup-CUS",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/DefaultResourceGroup-EUS",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/DefaultResourceGroup-EUS2",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/GCP-Dev",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/grayson",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/HermanInfra",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/MA_defaultazuremonitorworkspace-cus_centralus_managed",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/MC_grayson_test-cluster_eastus",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/myResourceGroup",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/NetworkWatcherRG",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/otherRG",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/rg-amba-monitoring-001",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/rg-factual-kitten",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/test13125_group",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/testlk0-23_group",
+          "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa/resourceGroups/testVm123123_group",
+          "/subscriptions/5f2613a6-13a4-424c-8083-376b6d62f7e1/resourceGroups/B2C",
+          "/subscriptions/5f2613a6-13a4-424c-8083-376b6d62f7e1/resourceGroups/Default-ActivityLogAlerts"
+        ],
+        "requiredRoleAssignments": [
+          {
+            "crossTenant": false,
+            "roleDisplayName": "Tag Contributor",
+            "description": "Policy Assignment '/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging': Role Assignment required by Policy, deployed by: 'epac/4bd3205d-7f89-49e8-b268-2cdfdafb4bde/tenant'",
+            "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/4a9ae827-6dc8-4573-8ac7-8239d42aa03f",
+            "scope": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
+          },
+          {
+            "crossTenant": false,
+            "roleDisplayName": "Contributor",
+            "description": "Policy Assignment '/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging': Role Assignment required by Policy, deployed by: 'epac/4bd3205d-7f89-49e8-b268-2cdfdafb4bde/tenant'",
+            "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+            "scope": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
+          }
+        ]
+      }
+    },
+    "replace": {}
+  },
+  "exemptions": {
+    "numberOfChanges": 0,
+    "new": {},
+    "numberUnchanged": 0,
+    "delete": {},
+    "numberOfExpired": 0,
+    "update": {},
+    "replace": {},
+    "numberOfOrphans": 0
+  },
+  "pacOwnerId": "4bd3205d-7f89-49e8-b268-2cdfdafb4bde",
+  "policyDefinitions": {
+    "numberOfChanges": 0,
+    "numberUnchanged": 1,
+    "delete": {},
+    "update": {},
+    "new": {},
+    "replace": {}
+  },
+  "policySetDefinitions": {
+    "numberOfChanges": 0,
+    "numberUnchanged": 1,
+    "delete": {},
+    "update": {},
+    "new": {},
+    "replace": {}
+  },
+  "createdOn": "2025-09-30 13:34:38Z"
+}

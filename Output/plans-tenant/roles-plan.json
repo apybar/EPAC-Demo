@@ -1,0 +1,35 @@
+{
+  "roleAssignments": {
+    "removed": [],
+    "updated": [],
+    "numberOfChanges": 2,
+    "added": [
+      {
+        "roleDisplayName": "Tag Contributor",
+        "assignmentId": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging",
+        "properties": {
+          "description": "Policy Assignment '/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging': Role Assignment required by Policy, deployed by: 'epac/4bd3205d-7f89-49e8-b268-2cdfdafb4bde/tenant'",
+          "principalId": null,
+          "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/4a9ae827-6dc8-4573-8ac7-8239d42aa03f",
+          "principalType": "ServicePrincipal"
+        },
+        "scope": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5",
+        "assignmentDisplayName": "TAGGING - Demo Tagging Requirements"
+      },
+      {
+        "roleDisplayName": "Contributor",
+        "assignmentId": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging",
+        "properties": {
+          "description": "Policy Assignment '/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5/providers/Microsoft.Authorization/policyAssignments/tagging': Role Assignment required by Policy, deployed by: 'epac/4bd3205d-7f89-49e8-b268-2cdfdafb4bde/tenant'",
+          "principalId": null,
+          "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
+          "principalType": "ServicePrincipal"
+        },
+        "scope": "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5",
+        "assignmentDisplayName": "TAGGING - Demo Tagging Requirements"
+      }
+    ]
+  },
+  "pacOwnerId": "4bd3205d-7f89-49e8-b268-2cdfdafb4bde",
+  "createdOn": "2025-09-30 13:34:38Z"
+}
