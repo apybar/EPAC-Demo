@@ -1,5 +1,5 @@
 {
-    "name": "cb71df76-7a26-4035-957f-0cf08844c4df",
+    "name": "global-tagging-initiative",
     "properties": {
         "displayName": "Tagging Initiative",
         "description": "This is the grouping of tagging policies required for this environment",
@@ -8,15 +8,6 @@
             "category": "Tag"
         },
         "PolicyDefinitions": [
-            {
-                "policyDefinitionReferenceId": "Inherit-Sub-tag",
-                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/40df99da-1232-49b1-a39a-6da8d878f469",
-                "parameters": {
-                    "tagName": {
-                        "value": "cost center"
-                    }
-                }
-            },
             {
                 "policyDefinitionReferenceId": "Inherit-RG-tag",
                 "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea3f2387-9b95-492a-a190-fcdc54f7b070",
