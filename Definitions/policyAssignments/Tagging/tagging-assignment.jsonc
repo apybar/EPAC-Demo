@@ -4,7 +4,7 @@
     "policySetName": "global-tagging-initiative",
     "nonComplianceMessages": [
         {
-            "message": "You do not meet all Tier 0 tagging requirements, check policy assginment TAGGING - Enforce Tier 0 Tagging Requirements'"
+            "message": "You do not meet all tagging requirements."
         }
     ]
 },
