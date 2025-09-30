@@ -3,7 +3,7 @@
     "definitionEntryList": [
         {
             "policySetName": "cb71df76-7a26-4035-957f-0cf08844c4df",
-            "displayName": "NOW enforce Tagging Requirements for Azure Cloud",
+            "displayName": "Demo enforce Tagging Requirements for Azure Cloud",
             "assignment": {
                 "append": true,
                 "name": "tag2",
@@ -13,19 +13,6 @@
         }
     ],
     "children": [
-        {
-            "nodeName": "EPAC-DEV/",
-            "assignment": {
-                "name": "msft-",
-                "displayName": "TAGGING - ",
-                "description": "Environment controls enforcement with "
-            },
-            "scope": {
-                "tenant": [
-                    "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
-                ]
-            }
-        },
         {
             "nodeName": "tenant/",
             "assignment": {
