@@ -1,28 +1,20 @@
 {
-    "name": "global-tagging-initiative",
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-set-definition-schema.json",
+    "name": "EnforceGlobalTaggingRequirements-PolicySet-20250121",
     "properties": {
-        "displayName": "Tagging Initiative",
-        "description": "This is the grouping of tagging policies required for this environment",
+        "displayName": "TAGGING - Enforce Global Tagging Requirements",
+        "description": "Tagging requirements for Azure resources.",
         "metadata": {
             "version": "1.0.0",
-            "category": "Tag"
+            "category": "Tagging"
         },
-        "PolicyDefinitions": [
+        "policyDefinitions": [
             {
-                "policyDefinitionReferenceId": "Inherit-RG-tag",
-                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ea3f2387-9b95-492a-a190-fcdc54f7b070",
+                "policyDefinitionReferenceId": "AddDateCreatedTag",
+                "policyDefinitionName": "AddDateCreatedTag-Definition-20240819",
                 "parameters": {
-                    "tagName": {
-                        "value": "cost center"
-                    }
-                }
-            },
-            {
-                "policyDefinitionReferenceId": "add-date-created-tag",
-                "policyDefinitionName": "bf395210-23b2-49ca-b7c9-5b25faf19fda",
-                "parameters": {
-                    "tagName": {
-                        "value": "deployment time"
+                    "effect": {
+                        "value": "Modify"
                     }
                 }
             }
