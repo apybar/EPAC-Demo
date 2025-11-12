@@ -1,27 +1,78 @@
 {
-    "nodeName": "/tagging/",
+    "$schema": "https://raw.githubusercontent.com/Azure/enterprise-azure-policy-as-code/main/Schemas/policy-assignment-schema.json",
+    "nodeName": "/TaggingRequirements/",
     "definitionEntry": {
-    "policySetName": "global-tagging-initiative",
-    "nonComplianceMessages": [
-        {
-            "message": "You do not meet all tagging requirements."
-        }
-    ]
-},
+        "policySetName": "EnforceGlobalTaggingRequirements-PolicySet-20250121",
+        "nonComplianceMessages": [
+            {
+                "message": "You do not meet all tagging requirements, check policy assignment 'TAGGING - Enforce Global Tagging Requirements'"
+            }
+        ]
+    },
     "children": [
         {
-            "nodeName": "tenant/",
+            "nodeName": "Tenant/",
             "assignment": {
-                "name": "tagging",
-                "displayName": "TAGGING - Demo Tagging Requirements",
-                "description": "Environment controls enforcement with "
+                "name": "GlobalaTaing", //24 character limit
+                "displayName": "TAGGING - Enforce Global Tagging Requirements",
+                "description": "Tagging requirements for Azure resources."
             },
+            "enforcementMode": "Default",
+            "parameters": {},
             "scope": {
-                "tenant": [
+                "Managed_Tenant": [
+                    "/subscriptions/58abd941-daf6-497a-9866-71fbd0199a6d"
+                ],
+                "My_Tenant": [
                     "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
+                ]
+            },
+            "additionalRoleAssignments": {
+                "My_Tenant": [
+                    {
+                        "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+                        "scope": "/subscriptions/58abd941-daf6-497a-9866-71fbd0199a6d"
+                    }
+                ]
+            }
+        },
+        {
+            "nodeName": "Tenant/",
+            "assignment": {
+                "name": "MyNetworkingPolicy", //24 character limit
+                "displayName": "Network - Enforce Global Tagging Requirements",
+                "description": "Tagging requirements for Azure resources."
+            },
+            "enforcementMode": "Default",
+            "parameters": {},
+            "scope": {
+                "Managed_Tenant": [
+                    "/subscriptions/58abd941-daf6-497a-9866-71fbd0199a6d"
+                ],
+                "My_Tenant": [
+                    "/providers/Microsoft.Management/managementGroups/68b133a0-68af-43fa-a9c3-d1b9bf296ea5"
+                ]
+            },
+            "additionalRoleAssignments": {
+                "My_Tenant": [
+                    {
+                        "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+                        "scope": "/providers/Microsoft.Management/managementGroups/ed6f0214-ecda-45a1-ab42-6a548c0ad535"
+                    },
+                    {
+                        "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+                        "scope": "/subscriptions/5e81976f-4b4e-4f2b-bb61-b9e4a1959baa"
+                    },
+                    {
+                        "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+                        "scope": "/subscriptions/58abd941-daf6-497a-9866-71fbd0199a6d"
+                    },
+                    {
+                        "roleDefinitionId": "/providers/microsoft.authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+                        "scope": "/subscriptions/e5b796a7-2664-457c-b6e5-901740b4c045"
+                    }
                 ]
             }
         }
     ]
 }
-
