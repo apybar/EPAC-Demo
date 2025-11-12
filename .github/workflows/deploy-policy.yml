@@ -35,13 +35,6 @@ jobs:
           name: plans-${{ inputs.pacEnvironmentSelector }}
           path: ${{ inputs.PAC_INPUT_FOLDER }}
 
-      - name: Install Required Modules
-        uses: Azure/powershell@v2
-        with:
-          inlineScript: |
-            Install-Module EnterprisePolicyAsCode -Force
-          azPSVersion: "latest"
-
       - name: Azure Login
         uses: azure/login@v2
         with:
@@ -53,6 +46,5 @@ jobs:
       - name: Deploy Policy
         uses: azure/powershell@v2
         with:
-          inlineScript: |
-            Deploy-PolicyPlan -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue
+          inlineScript: 'Scripts/Deploy/Deploy-PolicyPlan.ps1 -PacEnvironmentSelector ${{ inputs.pacEnvironmentSelector }} -InformationAction Continue'
           azPSVersion: "latest"
